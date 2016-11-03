@@ -36,3 +36,4 @@ class MyRobot(wpilib.IterativeRobot):
 
 if __name__ == "__main__":
     wpilib.run(MyRobot)
+    #calls main class
