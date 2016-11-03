@@ -7,8 +7,8 @@ class MyRobot(wpilib.IterativeRobot):
         This function is called upon program startup and
         should be used for any initialization code.
         """
-		frontLeft = wpilib.Talon(0)
-		frontRight = wpilib.Talon(1)
+	frontLeft = wpilib.Talon(0)
+	frontRight = wpilib.Talon(1)
         self.robot_drive = wpilib.RobotDrive(frontLeft,frontRight)
         self.stick = wpilib.Joystick(1)
 
@@ -20,7 +20,7 @@ class MyRobot(wpilib.IterativeRobot):
         """This function is called periodically during autonomous."""
 
         # Check if we've completed 100 loops (approximately 2 seconds)
-        if self.auto_loop_counter < 100:
+        if self.auto_loop_counter < 100: #50 loops is about 1 second
             self.robot_drive.drive(-0.5, 0) # Drive forwards at half speed
             self.auto_loop_counter += 1
         else:
